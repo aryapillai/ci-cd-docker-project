@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+        githubPush() // Trigger build on push
+    }
 
     environment {
         IMAGE_NAME = "myapp" // Docker image name
